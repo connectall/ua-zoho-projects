@@ -1,0 +1,23 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "comments": {
+        "*": {
+          "id": "commentId",
+          "added_by": "commentAuthor",
+          "content": "commentBody",
+          "created_time_long": "createdDate",
+          "last_modified_time_long": "updatedDate"
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "commentId": "=toString",
+      "commentAuthor": "=toString"
+    }
+  }
+  ]

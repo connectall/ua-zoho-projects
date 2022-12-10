@@ -1,0 +1,34 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "comments": {
+        "*": {
+          "id": "comments[&1].commentId",
+          "created_time_long": "comments[&1].createdDate",
+          "last_modified_time_long": "comments[&1].updatedDate",
+          "added_by": "comments[&1].commentAuthor",
+          "content": "comments[&1].commentBody",
+          "isPublic": "comments[&1].commentVisibility"
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "comments": {
+        "*": {
+          "commentId": "=toString",
+          "commentAuthor": "=toString"
+        }
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "comments": []
+    }
+  }
+ ]

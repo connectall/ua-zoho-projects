@@ -1,0 +1,92 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "tasks": {
+        "*": {
+          "id": "result.[&1].&",
+          "name": "result.[&1].fields.&",
+          "description": "result.[&1].fields.&",
+          "assignee_id": "result.[&1].fields.&",
+          "reporter_id": "result.[&1].fields.&",
+          "key": "result.[&1].fields.&",
+          "created_time_long": "result.[&1].fields.&",
+          "last_updated_time_long": "result.[&1].fields.&",
+          "due_date": "result.[&1].fields.&",
+          "priority": "result.[&1].fields.&",
+          "details": {
+            "owners": {
+              "*": {
+                "id": "result.[&4].fields.person_responsible[]"
+              }
+            }
+          },
+          "tasklist": {
+            "id": "result.[&2].fields.tasklist_id"
+          },
+          "start_date": "result.[&1].fields.&",
+          "end_date": "result.[&1].fields.&",
+          "start_time": "result.[&1].fields.&",
+          "end_time": "result.[&1].fields.&",
+          "duration": "result.[&1].fields.&",
+          "duration_type": "result.[&1].fields.&",
+          "work_type": "result.[&1].fields.&",
+          "rate_per_hour": "result.[&1].fields.&",
+          "completed_on": "result.[&1].fields.&",
+          "budget_value": "result.[&1].fields.&",
+          "budget_threshold": "result.[&1].fields.&",
+          "cost_per_hour": "result.[&1].fields.&",
+          "revenue_budget": "result.[&1].fields.&",
+          "severity": {
+            "id": "result.[&2].fields.severity_id"
+          },
+          "reproducible": {
+            "id": "result.[&2].fields.reproducible_id"
+          },
+          "module": {
+            "id": "result.[&2].fields.module_id"
+          },
+          "classification": {
+            "id": "result.[&2].fields.classification_id"
+          },
+          "status": {
+            "id": "result.[&2].fields.custom_status"
+          },
+          "resolution": {
+            "content": "result.[&2].fields.resolution"
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "totalRecords": "=size(@(1,result))",
+      "result": {
+        "*": {
+          "id": "=toString"
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "totalRecords": "&",
+      "result": {
+        "*": {
+          "id": "result.[&1].&",
+          "fields": "result.[&1].&"
+        }
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "totalRecords": 0,
+      "result": []
+    }
+   }
+ ]

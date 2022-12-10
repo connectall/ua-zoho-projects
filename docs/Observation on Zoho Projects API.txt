@@ -1,0 +1,46 @@
+1) API request is in url parameters and API response is in JSON format.
+-----> No Risk
+
+
+2) Authentication mode is OAuth2.0. ConnectAll can make use of API Key Authentication.
+-----> No Risk
+
+
+3) Metadata:
+	i) It has project scope like portals and projects.
+	ii) It has issue-type scope like tasks and bugs.
+		a) But bugs issue-type cannot be done with tasks as both have different last-modified-time variables.
+		b) Already for bugs there is a universal adapter created (i.e) zoho-bugtracker
+-----> No Risk
+
+
+4) Field Mapping:
+	i) There are standard fields published in the documentation.
+	ii) There is also custom fields mentioned in the documentation.
+-----> No Risk
+
+
+5) The DateTime format is in Unix Epoch Milli Seconds Format.
+-----> No Risk
+
+
+6) Flow Filters is doable for this adapter
+-----> No Risk
+
+
+7) Comments and Attachments:
+	i) Comments is doable for this adapter
+-----> No Risk
+
+	ii) Attachments is not doable as it has both GET attachments and POST attachments api. But both attachments APIs are not working properly! 
+-----> Risk
+
+
+8) API Configuration:
+	i) Query Modified Records - GET /restapi/portal/${portal}/projects/${projects}/tasks/?last_modified_time=${last-modified-time}&${pollQuery}
+
+	ii) Read Record By ID - GET /restapi/portal/${portal}/projects/${projects}/tasks/${recordId}/
+
+	iii) Create Records - POST /restapi/portal/${portal}/projects/${projects}/tasks/?${fields[ValueSeparator:'='] [FieldSeparator:'&']}
+
+	iv) Update Records - POST /restapi/portal/${portal}/projects/${projects}/tasks/${recordId}/?${fields[ValueSeparator:'='] [FieldSeparator:'&']}

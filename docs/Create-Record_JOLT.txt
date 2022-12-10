@@ -1,0 +1,82 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "tasks": {
+        "*": {
+          "id": "&",
+          "bug_number": "fields.&",
+          "name": "fields.&",
+          "description": "fields.&",
+          "assignee_id": "fields.&",
+          "reporter_id": "fields.&",
+          "key": "fields.&",
+          "priority": "fields.&",
+          "details": {
+            "owners": {
+              "*": {
+                "id": "fields.person_responsible[]"
+              }
+            }
+          },
+          "created_by": "fields.&",
+          "created_by_email": "fields.&",
+          "created_time_long": "fields.&",
+          "last_updated_time_long": "fields.&",
+          "start_date_long": "fields.&",
+          "end_date_long": "fields.&",
+          "start_date": "fields.&",
+          "end_date": "fields.&",
+          "start_time": "fields.&",
+          "end_time": "fields.&",
+          "due_date": "fields.&",
+          "milestone_id": "fields.&",
+          "work_form": "fields.&",
+          "duration": "fields.&",
+          "duration_type": "fields.&",
+          "work": "fields.&",
+          "work_type": "fields.&",
+          "rate_per_hour": "fields.&",
+          "task_duration_as_work": "fields.&",
+          "clear_date": "fields.&",
+          "make_as_task": "fields.&",
+          "budget_value": "fields.&",
+          "budget_threshold": "fields.&",
+          "cost_per_hour": "fields.&",
+          "revenue_budget": "fields.&",
+          "percent_complete": "fields.&",
+          "billingtype": "fields.&",
+          "order_sequence": "fields.&",
+          "tasklist": {
+            "id": "fields.tasklist_id"
+          },
+          "severity": {
+            "id": "fields.severity_id"
+          },
+          "reproducible": {
+            "id": "fields.reproducible_id"
+          },
+          "module": {
+            "id": "fields.module_id"
+          },
+          "classification": {
+            "id": "fields.classification_id"
+          },
+          "status": {
+            "id": "fields.custom_status"
+          },
+          "completed": "fields.&",
+          "resolution": {
+            "content": "fields.resolution"
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "id": "=toString"
+    }
+  }
+ ]
